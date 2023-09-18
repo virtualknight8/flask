@@ -1,9 +1,13 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 import os
 
-
 app = Flask(__name__)
-print('kuch bhi')
+
+
+@app.route('/')
+def index():
+    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    return 'kuch bhi bc'
 
 
 if __name__ == '__main__':
